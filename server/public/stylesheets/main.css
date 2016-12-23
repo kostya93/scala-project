@@ -1,0 +1,17 @@
+.form-control {
+    margin-bottom: 10px;
+}
+
+.signup-btn {
+    width: 45%;
+    float: right;
+}
+
+
+.login-btn {
+    width: 45%;
+}
+.error {
+    width: 100%;
+    margin-top: 10px;
+}

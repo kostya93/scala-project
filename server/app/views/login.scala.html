@@ -1,0 +1,30 @@
+@(form: Form[(String, String)])
+
+@main("TTT") {
+    <div class="container">
+        <div class="col-sm-3">
+            @helper.form(routes.Auth.authenticate) {
+
+                <div class="row">
+                    <label for="username">Username</label>
+                    <input class="form-control" type="text" name="username" id="username">
+                </div>
+                <div class="row">
+                    <label for="password">Password</label>
+                    <input class="form-control" type="password" name="password" id="password">
+                </div>
+                <div class="row">
+                    <button type="submit" class="btn btn-success login-btn" id="login-btn">Log In</button>
+                    <a href="/signup" class="btn btn-default signup-btn" role="button">Sign Up</a>
+                </div>
+                @form.globalError.map { error =>
+                    <div class="row">
+                        <div class="alert alert-danger error">
+                            @error.message
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+}

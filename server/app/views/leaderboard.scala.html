@@ -1,0 +1,20 @@
+@(users: List[shared.User])
+
+@main("TTT") {
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <th>username</th>
+                <th>score</th>
+            </thead>
+            <tbody>
+            @for(user <- users) {
+                <tr>
+                    <td>@user.username</td>
+                    <td>@user.score</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}

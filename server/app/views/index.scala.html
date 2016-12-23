@@ -1,0 +1,18 @@
+@(user: shared.User)
+
+@main("TTT") {
+    <div class="container">
+        <div class="row">
+            <p>Hello, @user.username!</p>
+        </div>
+        <div class="row">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <input type="submit" class="btn btn-info" id="new-game" value="New Game">
+            </div>
+        </div>
+    </div>
+
+}
